@@ -1,13 +1,18 @@
 [tool.poetry]
-name = "hexlet-code"
+name = "hexlet-python-package"
 version = "0.1.0"
 description = ""
 authors = ["1Mans <pigmalioon1@gmail.com>"]
 readme = "README.md"
-packages = [{include = "hexlet_code"}]
+packages = [
+    {include = "gendiff" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+
+[tool.poetry.scripts]
+gendiff = "hexlet_code.scripts.gendiff:main"
 
 
 [build-system]
